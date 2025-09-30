@@ -2,11 +2,8 @@
 Projeto de desenvolvimento - estudo de programação
 ------------------------------------------------------
 
-DESAFIO - Nivel novato
-
-Um programa em C que permite que o usuário insira os dados de duas cartas do Super Trunfo, depois, exibe os dados das cartas na tela.
+Um programa em C que permite que o usuário insira os dados de duas cartas do Super Trunfo ou exiba os dados das cartas na tela através de um menu interativo.
 Para cada carta, o usuário deverá fornecer as seguintes informações:
-
 
 
 Estado: Uma letra de 'A' a 'H' (representando um dos oito estados). Tipo: char
@@ -22,4 +19,9 @@ População: O número de habitantes da cidade. Tipo: int
 PIB: O Produto Interno Bruto da cidade. Tipo: float
  
 Número de Pontos Turísticos: A quantidade de pontos turísticos na cidade. Tipo: int
+
+
+
+Além disso, também calcula densidade populacional e PIB per capta de cada carta, depois, soma todos os atributos e subtrai a densidade para calcular o super poder das cartas.
+
 
