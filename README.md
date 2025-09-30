@@ -2,7 +2,7 @@
 Projeto de desenvolvimento - estudo de programação
 ------------------------------------------------------
 
-Um programa em C que permite que o usuário insira os dados de duas cartas do Super Trunfo ou exiba os dados das cartas na tela através de um menu interativo.
+Um programa em C que permite que o usuário insira os dados de duas cartas do Super Trunfo, exiba os dados das cartas na tela ou compare os atributos das cartas através de um menu interativo.
 Para cada carta, o usuário deverá fornecer as seguintes informações:
 
 
@@ -23,5 +23,7 @@ Número de Pontos Turísticos: A quantidade de pontos turísticos na cidade. Tip
 
 
 Além disso, também calcula densidade populacional e PIB per capta de cada carta, depois, soma todos os atributos e subtrai a densidade para calcular o super poder das cartas.
+
+também compara os dados das cartas e atribui pontos a quem tiver os melhores numeros, resultando em uma carta vencedora no final da comparação de todos os dados.
 
 
