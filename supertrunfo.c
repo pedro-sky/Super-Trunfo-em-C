@@ -10,6 +10,7 @@ void main (){
     int populacao1, populacao2;
     int turistico1, turistico2;
     int resultado1 = 0, resultado2 = 0;
+    int atributo;
     
     float area1, area2;
     float PIB1, PIB2;
@@ -39,6 +40,7 @@ void main (){
     printf("1. preencher dados das cartas\n");
     printf("2. ver dados das cartas\n");
     printf("3. comparar cartas\n");
+    printf("4. escolher atributos para comparar\n");
     scanf("%d", &menu_inicial);
 
     
@@ -172,6 +174,7 @@ void main (){
 
             break;
 
+
         case 3:
             
             printf("\nCOMPARANDO DUAS CARTAS\n:");
@@ -251,6 +254,37 @@ void main (){
             }
             else if (resultado1 == resultado2){
                 printf("\nempate !!!\n");
+            }
+
+            break;
+
+
+        case 4:
+            //menu para escolher atributos para serem comparados
+            printf("\n\nescolha o primeiro atributo para comparar:\n");
+            printf("1. populacao\n");
+            printf("2. area\n");
+            printf("3. densidade demografica\n");
+            printf("4. pontos turisticos\n");
+            printf("5. PIB\n");
+            printf("6. PIB per capta\n");
+            printf("7. super poder\n");
+
+            scanf("%d", &atributo);
+
+            switch (atributo){
+                case 1:
+
+                    if (populacao1 > populacao2){
+                        resultado1++;
+                        printf("\ncarta 1 venceu!\n");
+                    }
+
+                    if (populacao2 > populacao1){
+                        resultado2++;
+                        printf("\ncarta 2 venceu!\n");
+                    }
+
             }
 
             break;
