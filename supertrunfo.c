@@ -10,7 +10,7 @@ void main (){
     int populacao1, populacao2;
     int turistico1, turistico2;
     int resultado1 = 0, resultado2 = 0;
-    int atributo;
+    int atributo1, atributo2;
     
     float area1, area2;
     float PIB1, PIB2;
@@ -270,25 +270,255 @@ void main (){
             printf("6. PIB per capta\n");
             printf("7. super poder\n");
 
-            scanf("%d", &atributo);
+            scanf("%d", &atributo1);
 
-            switch (atributo){
+
+            printf("\n\nescolha o segundo atributo para comparar:\n");
+            printf("1. populacao\n");
+            printf("2. area\n");
+            printf("3. densidade demografica\n");
+            printf("4. pontos turisticos\n");
+            printf("5. PIB\n");
+            printf("6. PIB per capta\n");
+            printf("7. super poder\n");
+
+            scanf("%d", &atributo2);
+
+            //verifica se os atributos escolhidos sao iguais e encerra o programa
+            if (atributo1 == atributo2){
+                printf("\nescolha dois atributos diferentes para comparar\n");
+                return;
+            }
+
+            //verificando qual carta vence a comparação do atributo 1
+            switch (atributo1){
                 case 1:
 
                     if (populacao1 > populacao2){
                         resultado1++;
-                        printf("\ncarta 1 venceu!\n");
                     }
-
-                    if (populacao2 > populacao1){
+                    else if (populacao2 > populacao1){
                         resultado2++;
-                        printf("\ncarta 2 venceu!\n");
                     }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+                
+                
+                case 2:
 
+                    if (area1 > area2){
+                        resultado1++;
+                    }
+                    else if (area2 > area1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+                
+                
+                case 3:
+
+                    if (densidade1 > densidade2){
+                        resultado2++;
+                    }
+                    else if (densidade2 > densidade1){
+                        resultado1++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+
+
+                case 4:
+                    
+                    if (turistico1 > turistico2){
+                        resultado1++;
+                    }
+                    else if (turistico2 > turistico1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+
+                
+                case 5:
+                    
+                    if (PIB1 > PIB2){
+                        resultado1++;
+                    }
+                    else if (PIB2 > PIB1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+
+
+                case 6:
+
+                    if (PIB_percapta1 > PIB_percapta2){
+                        resultado1++;
+                    }
+                    else if (PIB_percapta2 > PIB_percapta1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+                    
+                case 7:
+
+                    if (superpoder1 > superpoder2){
+                        resultado1++;
+                    }
+                    else if (superpoder2 > superpoder1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
             }
 
+
+            //verificando qual carta venceu a comparação do atributo 2
+            switch (atributo2){
+                case 1:
+
+                    if (populacao1 > populacao2){
+                        resultado1++;
+                    }
+                    else if (populacao2 > populacao1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+                
+                
+                case 2:
+
+                    if (area1 > area2){
+                        resultado1++;
+                    }
+                    else if (area2 > area1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+                
+                
+                case 3:
+
+                    if (densidade1 > densidade2){
+                        resultado2++;
+                    }
+                    else if (densidade2 > densidade1){
+                        resultado1++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+
+
+                case 4:
+                    
+                    if (turistico1 > turistico2){
+                        resultado1++;
+                    }
+                    else if (turistico2 > turistico1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+
+                
+                case 5:
+                    
+                    if (PIB1 > PIB2){
+                        resultado1++;
+                    }
+                    else if (PIB2 > PIB1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+
+
+                case 6:
+
+                    if (PIB_percapta1 > PIB_percapta2){
+                        resultado1++;
+                    }
+                    else if (PIB_percapta2 > PIB_percapta1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+                    
+                case 7:
+
+                    if (superpoder1 > superpoder2){
+                        resultado1++;
+                    }
+                    else if (superpoder2 > superpoder1){
+                        resultado2++;
+                    }
+                    else{
+                        resultado1++;
+                        resultado2++;
+                    }
+                    break;
+            }
+
+
+            //exibindo resultado da comparação de 2 atributos escolhidos pelo usuário
+            printf("\nRESULTADO DA COMPARACAO\n");
+            if (resultado1 > resultado2){
+                printf("a carta 1 venceu!!!");
+            }
+            else if (resultado2 > resultado1){
+                printf("a carta 2 venceu!!!");
+            }
+            else{
+                printf("empate!!!");
+            }
             break;
 
     }
 
-};
+
+    return;
+}
